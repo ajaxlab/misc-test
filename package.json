@@ -1,0 +1,26 @@
+{
+  "name": "misc-test",
+  "version": "0.1.0",
+  "description": "Miscellaneous Performance Tests & Experiments",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajaxlab/misc-test.git"
+  },
+  "keywords": [
+    "test",
+    "performance"
+  ],
+  "author": "ajaxlab7@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ajaxlab/misc-test/issues"
+  },
+  "homepage": "https://github.com/ajaxlab/misc-test#readme",
+  "dependencies": {
+    "webpack": "^4.29.6"
+  }
+}
