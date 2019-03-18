@@ -28,6 +28,13 @@ for (let i = 0; i < 10000; i++) {
   array.push({i});
 }
 hrend = process.hrtime(hrstart);
+console.info('Array push: %ds %dms', hrend[0], hrend[1] / 1000000);
+
+hrstart = process.hrtime();
+for (let i = 0; i < 10000; i++) {
+  array[i] = i;
+}
+hrend = process.hrtime(hrstart);
 console.info('Array: %ds %dms', hrend[0], hrend[1] / 1000000);
 
 hrstart = process.hrtime();
@@ -79,10 +86,17 @@ console.info('Set: %ds %dms', hrend[0], hrend[1] / 1000000);
 
 hrstart = process.hrtime();
 for (let i = 0; i < 10000; i++) {
-  room = array.indexOf(i);
+  room = array[i];
 }
 hrend = process.hrtime(hrstart);
 console.info('Array: %ds %dms', hrend[0], hrend[1] / 1000000);
+
+hrstart = process.hrtime();
+for (let i = 0; i < 10000; i++) {
+  room = array.indexOf(i);
+}
+hrend = process.hrtime(hrstart);
+console.info('Array indexOf: %ds %dms', hrend[0], hrend[1] / 1000000);
 
 hrstart = process.hrtime();
 for (let i = 0; i < 10000; i++) {
