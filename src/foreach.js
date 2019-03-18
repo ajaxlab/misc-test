@@ -27,3 +27,12 @@ for (let i = 0; i < 10000; i++) {
 }
 hrend = process.hrtime(hrstart);
 console.info(val, 'for: %ds %dms', hrend[0], hrend[1] / 1000000);
+
+hrstart = process.hrtime();
+for (let i = 0; i < 10000; i++) {
+  for (let value of arr) {
+    val = value;
+  }
+}
+hrend = process.hrtime(hrstart);
+console.info(val, 'for of: %ds %dms', hrend[0], hrend[1] / 1000000);
