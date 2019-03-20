@@ -1,7 +1,7 @@
 
 const map = new Map();
 const set = new Set();
-const array = [];
+let array = [];
 const object = Object.create(null);
 
 let hrstart;
@@ -36,6 +36,14 @@ for (let i = 0; i < 10000; i++) {
 }
 hrend = process.hrtime(hrstart);
 console.info('Array: %ds %dms', hrend[0], hrend[1] / 1000000);
+
+hrstart = process.hrtime();
+array = [];
+for (let i = 0; i < 10000; i++) {
+  array[array.length] = i;
+}
+hrend = process.hrtime(hrstart);
+console.info('array[array.length]: %ds %dms', hrend[0], hrend[1] / 1000000);
 
 hrstart = process.hrtime();
 for (let i = 0; i < 10000; i++) {
